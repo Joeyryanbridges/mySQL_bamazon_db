@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
     user: "root",
 
     password: "root",
-    database: "bamazon_db"
+    database: "bamazon"
 });
 
 //Connection with DB
@@ -25,7 +25,7 @@ connection.connect(function (err) {
 //Function to start bamazon and display products
 var displayProducts = function () {
 
-    console.log("Welcome to Bamazon! Please, find our inventory bellow.");
+    console.log("Welcome to Bamazon! Please, find our inventory below.");
 
     //Query DB
     connection.query("SELECT * FROM products", function (err, res) {
@@ -93,10 +93,7 @@ function purchase(ID, quantityNeeded) {
 
             console.log("We don't have enough of that item to fulfill your order.");
         };
-        //Callback to displayProducts function.
-        displayProducts();
     })
 }
-
 //Callback to displayProducts function.
 displayProducts();
