@@ -1,1 +1,1 @@
-# mySQL_bamazon_db
+mySQL_bamazon_db/images/mySQL-1.jpg
